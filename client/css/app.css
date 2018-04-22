@@ -1,0 +1,35 @@
+/*overpass regular font?*/
+body {
+    background-color: rgb(230, 238, 243);
+    font-family: helvetica, sans-serif;
+}
+
+h1 {
+    color: white;
+    background-color: rgb(0, 63, 105)
+}
+
+.nav {
+    background-color: rgb(198, 195, 198);
+}
+
+button {
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-button {
+    background-color: rgb(74, 77, 74);
+    color: white;
+}
+
+.nav-button:hover {
+    background-color: rgb(0, 119, 192);
+}
+
+.control-button {
+    background-color: rgb(1, 205, 114);
+    color: white;
+}

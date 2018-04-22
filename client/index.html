@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Engineering Database</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>Application Engineering Database</h1>
+    <div id="controls">
+        <h2>Controls</h2>
+        <div>
+            <button class="control-button"><i class="fa fa-plus"></i></button> <!-- Add Record -->
+            <button class="control-button"><i class="fa fa-save"></i></button> <!-- Update Record -->
+            <button class="control-button"><i class="fa fa-angle-double-up"></i></button> <!-- Update History -->
+        </div>
+        <p>
+            <div>Enter an AE Number <input type="text"><button>Go to</button></div>
+            <div>Enter search string <input type="text"><button>Advanced Search</button></div>
+        </p>
+
+        <div class="nav">
+            <button class="nav-button"><i class="fa fa-angle-double-left"></i></button> <!-- Oldest Record -->
+            <button class="nav-button"><i class="fa fa-angle-left"></i></button> <!-- Previous Record -->
+            <button class="nav-button"><i class="fa fa-angle-right"></i></button> <!-- Next Record -->
+            <button class="nav-button"><i class="fa fa-angle-double-right"></i></button> <!-- Newest Record -->
+            <button class="nav-button"><i class="fa fa-folder-open"></i></button> <!-- Open Files -->
+        </div>
+    </div>
+
+    <div id="product">
+        <h2>Product Information</h2>
+        <h3>{AE Number} - {general} - {specification}</h3>
+        <div>Date created: <span>{dateCreated}</span></div>
+        <div>Created by: <span>{createdBy}</span></div>
+        <div>General: <span>{general}</span></div>
+        <div>Specifications: <span>{specification}</span></div>
+        <div>Technology: <span>{technology}</span></div>
+        <div>Drawing #: <span>{drawingNumber}</span></div>
+        <div>Record Quality: <span>{recordQuality}</span></div>
+        <div>Stage: <span>{stage}</span></div>
+        <h3>Product Description</h3>
+        <div>{productDescription}</div>
+    </div>
+
+    <div id="history">
+        <h2>Product History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rev</th>
+                    <th>Description</th>
+                    <th>Author</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{Rev}</td>
+                    <td>{Desc}</td>
+                    <td>{Auth}</td>
+                    <td>{Date}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="procurement">
+        <h2>Procurement Information</h2>
+        <div>
+            <h3>Supplier</h3>
+            <div>Supplier: <span>{supplier}</span></div>
+            <div>Street: <span>{street}</span></div>
+            <div>City: <span>{city}</span></div>
+            <div>State: <span>{state}</span></div>
+            <div>Zip: <span>{zip}</span></div>
+            <div>Phone Number: <span>{phoneNumber}</span></div>
+            <div>Fax Number: <span>{faxNumber}</span></div>
+
+            <h3>Supplier Details</h3>
+            <h4>Contact</h4>
+            <div>Name: <span>{contact.name}</span></div>
+            <div>Title: <span>{contact.title}</span></div>
+            <div>Email: <span>{contact.email}</span></div>
+            <div>Cell Number: <span>{contact.cell}</span></div>
+
+            <h4>Description</h4>
+            <div>Part Number: <span>{supplierPN}</span></div>
+            <div>Description: <span>{supplierDescription}</span></div>
+            <div>Lead Time: <span>{leadTime}</span></div>
+
+            <h4>Pricing</h4>
+            <div>Cost: <span>{cost}</span></div>
+            <div>Quote Dates: <span>{quoteDate}</span></div>
+            <div>List Price (USD): <span>{listPriceUSD}</span></div>
+            <div>List Price (CAD): <span>{listPriceCAD}</span></div>
+
+        </div>
+    </div>
+</body>
+</html>
