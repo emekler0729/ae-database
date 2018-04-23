@@ -50,21 +50,34 @@ button {
     float: right;
 }
 
-table {
-    border: 1px solid black;
+#details {
+    padding: 0 8px;
 }
 
-td {
-    border: 1px solid black;
+#history {
+    padding: 0 8px;
 }
 
-th {
-    border: 1px solid black;
+#history h2 {
+    margin-bottom: 2px;
+    float: left;
 }
 
-#details, #history, #procurement {
-    padding: 0px 8px;
-    border: 2px solid black;
+#history table {
+    width: 100%;
+    background: rgb(198, 195, 198);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#history th {
+    border-bottom: 1px solid black;
+}
+
+
+#inc-rev {
+    margin: 10px 0px 2px 0px;
+    float: right;
 }
 
 #product {
@@ -72,7 +85,28 @@ th {
     float: left;
 }
 
-#procurement {
-    width: 30%;
-    float: right;
+#product h3 {
+    margin-bottom: 2px;
 }
+
+#procurement {
+    float: right;
+    padding: 0 8px;
+    width: 30%;
+}
+
+#procurement h4 {
+    margin-bottom: 2px;
+}
+
+#description {
+    background: white;
+    border: 2px solid black;
+    height: 300px;
+    border-radius: 5px;
+}
+
+#controls {
+    font-weight: bold;
+}
+

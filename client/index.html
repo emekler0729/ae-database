@@ -11,34 +11,34 @@
     <div id="banner">Application Engineering Database</div>
     <div id="controls">
         <div id="control-button-group">
-            <button class="control-button"><i class="fa fa-plus"></i></button> <!-- Add Record -->
             <button class="control-button"><i class="fa fa-save"></i></button> <!-- Update Record -->
-            <button class="control-button"><i class="fa fa-angle-double-up"></i></button> <!-- Update History -->
+            <button class="control-button"><i class="fa fa-plus"></i></button> <!-- Add Record -->
+
         </div>
         <div>
-            <span>AE <input type="text"><button>Go to</button></span>
-            <span>Search <input type="text"><button>Advanced Search</button></span>
+            <label for="ae-number">AE</label>
+            <input id="ae-number" type="text" placeholder="99999"><button><i class="fa fa-location-arrow"></i></button>
+            <label for="search">Search</label>
+            <input id="search" type="text" placeholder="Search..."><button><i class="fa fa-search"></i></button>
         </div>
 
 
     </div>
     <div id="product">
         <div id="details">
-            <h2>Product Information</h2>
-            <h3>{AE Number} - {general} - {specification}</h3>
+            <h2>{AE Number} - {general} - {specification}</h2>
             <div>Date created: <span>{dateCreated}</span></div>
             <div>Created by: <span>{createdBy}</span></div>
-            <div>General: <span>{general}</span></div>
-            <div>Specifications: <span>{specification}</span></div>
             <div>Technology: <span>{technology}</span></div>
             <div>Drawing #: <span>{drawingNumber}</span></div>
             <div>Record Quality: <span>{recordQuality}</span></div>
             <div>Stage: <span>{stage}</span></div>
             <h3>Product Description</h3>
-            <div>{productDescription}</div>
+            <div id="description">{productDescription}</div>
         </div>
         <div id="history">
             <h2>Product History</h2>
+            <button id="inc-rev" class="control-button"><i class="fa fa-angle-double-up"></i></button> <!-- Update History -->
             <table>
                 <thead>
                     <tr>
@@ -61,33 +61,102 @@
     </div>
     <div id="procurement">
         <h2>Procurement Information</h2>
-        <div>
-            <h3>Supplier</h3>
-            <div>Supplier: <span>{supplier}</span></div>
-            <div>Street: <span>{street}</span></div>
-            <div>City: <span>{city}</span></div>
-            <div>State: <span>{state}</span></div>
-            <div>Zip: <span>{zip}</span></div>
-            <div>Phone Number: <span>{phoneNumber}</span></div>
-            <div>Fax Number: <span>{faxNumber}</span></div>
+        <div id="supplier">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Supplier:</td>
+                        <td>{supplier}</td>
+                    </tr>
+                    <tr>
+                        <td>Street:</td>
+                        <td>{street}</td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td>{city}</td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>{state}</td>
+                    </tr>
+                    <tr>
+                        <td>Zip:</td>
+                        <td>{zip}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td>{phoneNumber}</td>
+                    </tr>
+                    <tr>
+                        <td>Fax Number:</td>
+                        <td>{faxNumber}</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h3>Supplier Details</h3>
             <h4>Contact</h4>
-            <div>Name: <span>{contact.name}</span></div>
-            <div>Title: <span>{contact.title}</span></div>
-            <div>Email: <span>{contact.email}</span></div>
-            <div>Cell Number: <span>{contact.cell}</span></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td>{contact.name}</td>
+                    </tr>
+                    <tr>
+                        <td>Title:</td>
+                        <td>{contact.title}</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>{contact.email}</td>
+                    </tr>
+                    <tr>
+                        <td>Cell Number:</td>
+                        <td>{contact.cell}</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <h4>Description</h4>
-            <div>Part Number: <span>{supplierPN}</span></div>
-            <div>Description: <span>{supplierDescription}</span></div>
-            <div>Lead Time: <span>{leadTime}</span></div>
+            <table>
+                <tbody>
+                <tr>
+                    <td>Part Number:</td>
+                    <td>{supplierPN}</td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td>{supplierDescription}</td>
+                </tr>
+                <tr>
+                    <td>Lead Time:</td>
+                    <td>{leadTime}</td>
+                </tr>
+                </tbody>
+            </table>
 
             <h4>Pricing</h4>
-            <div>Cost: <span>{cost}</span></div>
-            <div>Quote Dates: <span>{quoteDate}</span></div>
-            <div>List Price (USD): <span>{listPriceUSD}</span></div>
-            <div>List Price (CAD): <span>{listPriceCAD}</span></div>
+            <table>
+                <tbody>
+                <tr>
+                    <td>Cost:</td>
+                    <td>{cost}</td>
+                </tr>
+                <tr>
+                    <td>Quote Date:</td>
+                    <td>{quoteDate}</td>
+                </tr>
+                <tr>
+                    <td>List Price (USD):</td>
+                    <td>{listPriceUSD}</td>
+                </tr>
+                <tr>
+                    <td>List Price (CAD):</td>
+                    <td>{listPriceCAD}</td>
+                </tr>
+                </tbody>
+            </table>
 
         </div>
     </div>
