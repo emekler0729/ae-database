@@ -1,49 +1,48 @@
-/*overpass regular font?*/
 body {
-    background: rgb(230, 238, 243);
-    font-family: 'Overpass', helvetica, sans-serif;
+    background-color: rgb(230, 238, 243);
+    /*font-family: 'Overpass', helvetica, sans-serif;*/
     margin: 0;
 }
 
-#banner {
-    font-family: 'Open Sans', Helvetica, sans-serif;
-    font-size: 32px;
-    color: white;
-    background-color: rgb(0, 63, 105);
-    margin: 0;
-    padding: 20px 8px;
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.navbar {
-    background-color: rgb(198, 195, 198);
-    padding: 5px 0px;
-    text-align: center;
-    clear: both;
+.btn {
+    font-size: 1.25rem;
 }
 
-button {
+.btn-primary {
     border: none;
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
+    background: rgb(1, 205, 114);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.1rem;
 }
 
-.nav-button {
+.btn-primary:hover {
+    background: rgb(106, 204, 239);
+}
+
+.btn-secondary {
+    border: none;
     background-color: rgb(74, 77, 74);
     color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.1rem;
 }
 
-.nav-button:hover {
+.btn-secondary:hover {
     background-color: rgb(0, 119, 192);
 }
 
-.control-button {
-    background-color: rgb(1, 205, 114);
-    color: white;
+#nav-controls {
+    align-content: center;
 }
 
-.control-button:hover {
-    background: rgb(106, 204, 239);
+.form-inline .input-group {
+    margin-right: 10px;
 }
 
 #control-button-group {
@@ -109,4 +108,6 @@ button {
 #controls {
     font-weight: bold;
 }
+
+
 
