@@ -1,0 +1,146 @@
+body {
+    background-color: #e7eff3;
+    /*background-color: #a8cde4;*/
+    /*font-family: 'Overpass', helvetica, sans-serif;*/
+}
+
+.record-bad {
+    float: right;
+    padding: 0.3rem 0.5rem;
+	height: 50px;
+	width: 50px;
+}
+
+#date-created {
+    float: right;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn {
+    font-size: 1.25rem;
+}
+
+.btn-primary {
+    border: none;
+    background: rgb(1, 205, 114);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.1rem;
+}
+
+.btn-primary:hover {
+    background: rgb(106, 204, 239);
+}
+
+.btn-secondary {
+    border: none;
+    background-color: rgb(74, 77, 74);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.1rem;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(0, 119, 192);
+}
+
+.form-inline .input-group {
+    margin-right: 10px;
+}
+
+.container-fluid {
+	margin-bottom: 70px;
+}
+
+#nav-controls {
+    align-content: center;
+}
+
+#control-button-group {
+    float: right;
+}
+
+#product h3 {
+    margin-bottom: 2px;
+}
+
+#details {
+    padding: 0 8px;
+}
+
+#history {
+    padding: 0 8px;
+}
+
+#history h2 {
+    margin-top: 15px;
+    margin-bottom: 2px;
+    float: left;
+}
+
+.table {
+    background: rgb(198, 195, 198);
+}
+
+.table td, .table thead th {
+    border-color: black;
+}
+
+#inc-rev {
+    margin: 10px 0px 2px 0px;
+    float: right;
+}
+
+#incRev textarea {
+	margin-bottom: 20px;
+}
+
+#procurement, #details-border {
+    border: 2px solid black;
+    border-radius: 5px;
+    background: white;
+}
+
+#procurement {
+	padding: 8px;
+}
+
+#details-border {
+    padding: 4px;
+}
+
+#procurement h4 {
+    margin-bottom: 2px;
+}
+
+#description {
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#controls {
+    font-weight: bold;
+}
+
+#details-data {
+    margin: 20px 0;
+}
+
+.procurement-table {
+	margin-bottom: 20px;
+}
+
+.left-col {
+	display: inline-block;
+	width: 35%;
+}
+
+.right-col {
+	display: inline-block;
+	width: 65%;
+}
