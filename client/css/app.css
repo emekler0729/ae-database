@@ -78,19 +78,17 @@ body {
 }
 
 #history h2 {
+    margin-top: 15px;
     margin-bottom: 2px;
     float: left;
 }
 
-#history table {
-    width: 100%;
+.table {
     background: rgb(198, 195, 198);
-    border: 1px solid black;
-    border-radius: 5px;
 }
 
-#history th {
-    border-bottom: 1px solid black;
+.table td, .table thead th {
+    border-color: black;
 }
 
 #inc-rev {
@@ -109,7 +107,6 @@ body {
 #description {
     background: white;
     border: 2px solid black;
-    height: 300px;
     border-radius: 5px;
 }
 
@@ -117,5 +114,6 @@ body {
     font-weight: bold;
 }
 
-
-
+#details-data {
+    margin: 20px 0;
+}
