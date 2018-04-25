@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AE Database</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Overpass:600" rel="stylesheet">
+
+    <!--Bootstrap CSS & Javascript CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-dark" style="background: rgb(0, 63, 105)">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo-notext.svg"/>
+            Application Engineering Database
+        </a>
+    </nav>
+    <div id="controls">
+			<div id="control-button-group">
+				<button class="btn btn-primary"><i class="fa fa-save"></i></button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProduct"><i class="fa fa-plus"></i></button>
+			</div>
+			<form class="form-inline">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">AE</span>
+					</div>
+					<input type="text" class="form-control" placeholder="99999">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button"><i class="fa fa-location-arrow"></i></button>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Search</span>
+					</div>
+					<input type="text" class="form-control" placeholder="Enter search...">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button"><i class="fa fa-search"></i></button>
+					</div>
+				</div>
+			</form>
+
+
+
+		</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="product" class="col-sm-8">
+				<div id="details">
+                    <div id=details-border>
+                        <div>
+                            <h1>AE16288 <img class="record-bad" src="images/red.svg"/></h1>
+                            <div>
+                                Custom Extraction - HSM Wrapper
+                                <div id="date-created">Date created: <span>11/11/2017</span></div>
+                            </div>
+                        </div>
+
+                        <div id="details-data" class="d-flex justify-content-between">
+                            <div>Created by: <span>Jane Doe</span></div>
+                            <div>Technology: <span>D-Series</span></div>
+                            <div>Drawing #: <span>A1732300</span></div>
+                            <div>Stage: <span>Ready to Order</span></div>
+                        </div>
+                    </div>
+					<h3>Product Description</h3>
+					<textarea id="description" class="form-control" rows="10">
+Narrow Custom Extraction for HSM flow Wrapper 
+
+Replacement Fume Extraction Manifold Assembly for Mars Albany HSM wrappers.
+
+Replaces Fume Extraction Manifold Assembly in AE16157 design due to mechanical interferences with original design.
+
+qty 3
+					</textarea>
+				</div>
+				<div id="history">
+					<h2>Product History</h2>
+					<button id="inc-rev" class="btn btn-primary" data-toggle="modal" data-target="#incRev"><i class="fa fa-angle-double-up"></i></button> <!-- Update History -->
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Rev</th>
+								<th>Description</th>
+								<th>Author</th>
+								<th>Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>A</td>
+								<td>Created New Part</td>
+								<td>NEW</td>
+								<td>11/11/2017</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div id="procurement">
+        <h2>Procurement Details</h2>
+        <div id="supplier">
+			<div class="procurement-table">
+				<div class="left-col">Supplier:</div><div class="right-col">Aluminum Fab Inc.</div>
+				<div class="left-col">Street:</div><div class="right-col">99999 Special Place, Unit 999A</div>
+				<div class="left-col">City:</div><div class="right-col">Huntsville</div>
+				<div class="left-col">State:</div><div class="right-col">AL</div>
+				<div class="left-col">Zip:</div><div class="right-col">12345</div>
+				<div class="left-col">Phone Number:</div><div class="right-col">222-123-9876</div>
+				<div class="left-col">Fax Number:</div><div class="right-col">222-321-6789</div>
+			</div>
+            <h3>Supplier Details</h3>
+            <h4>Contact</h4>
+			<div class="procurement-table">
+				<div class="left-col">Name:</div><div class="right-col">John Smith</div>
+				<div class="left-col">Title:</div><div class="right-col">Manager</div>
+				<div class="left-col">Email:</div><div class="right-col">john.smith@example.com</div>
+				<div class="left-col">Cell Number:</div><div class="right-col">223-555-1612</div>
+			</div>
+            <h4>Description</h4>
+            <div class="procurement-table">
+				<div class="left-col">Part Number:</div><div class="right-col">AE16288</div>
+				<div class="left-col">Description:</div><div class="right-col">HSM Extraction Tube Assy</div>
+				<div class="left-col">Lead Time:</div><div class="right-col">1-2 weeks ARO</div>
+			</div>
+            <h4>Pricing</h4>
+            <div class="procurement-table">
+				<div class="left-col">Cost:</div><div class="right-col">$1,000.00</div>
+				<div class="left-col">Quote Date:</div><div class="right-col">11-21-17</div>
+				<div class="left-col">List Price (USD):</div><div class="right-col">$1,500.00</div>
+				<div class="left-col">List Price (CAD):</div><div class="right-col">$2,000.00</div>
+			</div>
+
+        </div>
+    </div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar fixed-bottom navbar-dark justify-content-center" style="background: rgb(198, 195, 198);">
+        <form class="form-inline">
+            <button class="btn btn-secondary"><i class="fa fa-angle-double-left"></i></button>
+            <button class="btn btn-secondary"><i class="fa fa-angle-left"></i></button>
+            <button class="btn btn-secondary"><i class="fa fa-angle-right"></i></button>
+            <button class="btn btn-secondary"><i class="fa fa-angle-double-right"></i></button>
+            <button class="btn btn-secondary"><i class="fa fa-folder-open"></i></button>
+        </form>
+    </nav>
+
+    <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductLabel">Add New Record</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+						<div class="form-group row">
+							<label for="inputGeneral" class="col-sm-3 col-form-label">General</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="inputGeneral">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputSpecification" class="col-sm-3 col-form-label">Specification</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="inputSpecification">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputTechnology" class="col-sm-3 col-form-label">Technology</label>
+							<div class="col-sm-9">
+								<select class="form-control" id="inputTechnology">
+									<option>Ax-Series</option>
+									<option>Bitjet</option>
+									<option>C-Series</option>
+									<option>D-Series</option>
+									<option>F-Series</option>
+									<option>G-Series</option>
+									<option>GT Controller</option>
+									<option>JetArray</option>
+									<option>K-Series</option>
+									<option>Multiple</option>
+									<option>N-Series</option>
+									<option>Other</option>
+									<option>V-Series</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputDrawingNumber" class="col-sm-3 col-form-label">Drawing #</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" id="inputDrawingNumber">
+								<small id="inputDrawingNumberHelp" class="form-text text-muted">This field is optional.</small>
+							</div>
+						</div>
+					</form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="incRev" tabindex="-1" role="dialog" aria-labelledby="incRevLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="incRevLabel">Update Product History</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputUpdateDescription">Enter update description:</label>
+                        <textarea class="form-control" id="inputUpdateDescription" rows="3"></textarea>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="inputIncRev">
+							<label class="form-check-label" for="inputIncRev">Check to increment revision level</label>
+						</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
