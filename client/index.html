@@ -17,11 +17,10 @@
 <body>
     <nav class="navbar navbar-dark" style="background: rgb(0, 63, 105)">
         <a class="navbar-brand" href="#">
-            <!--<img src="images/logo.svg"/>-->
+            <img src="images/logo-notext.svg"/>
             Application Engineering Database
         </a>
     </nav>
-    <div class="alert alert-warning" role="alert">Check out the "+" and "^" buttons. Everything else doesn't do anything yet!</div>
     <div id="controls">
 			<div id="control-button-group">
 				<button class="btn btn-primary"><i class="fa fa-save"></i></button>
@@ -57,7 +56,7 @@
 				<div id="details">
                     <div id=details-border>
                         <div>
-                            <h1>{AE Number} <i class="fa fa-times record-bad"></i></h1>
+                            <h1>{AE Number} <img class="record-bad" src="images/red.svg"/></h1>
                             <div>
                                 {general} - {specification}
                                 <div id="date-created">Date created: <span>{dateCreated}</span></div>
@@ -97,107 +96,44 @@
 					</table>
 				</div>
 			</div>
-			<div id="procurement" class="col-sm-4">
+			<div class="col-sm-4">
+				<div id="procurement">
         <h2>Procurement Details</h2>
         <div id="supplier">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Supplier:</td>
-                        <td>{supplier}</td>
-                    </tr>
-                    <tr>
-                        <td>Street:</td>
-                        <td>{street}</td>
-                    </tr>
-                    <tr>
-                        <td>City:</td>
-                        <td>{city}</td>
-                    </tr>
-                    <tr>
-                        <td>State:</td>
-                        <td>{state}</td>
-                    </tr>
-                    <tr>
-                        <td>Zip:</td>
-                        <td>{zip}</td>
-                    </tr>
-                    <tr>
-                        <td>Phone Number:</td>
-                        <td>{phoneNumber}</td>
-                    </tr>
-                    <tr>
-                        <td>Fax Number:</td>
-                        <td>{faxNumber}</td>
-                    </tr>
-                </tbody>
-            </table>
-
+			<div class="procurement-table">
+				<div class="left-col">Supplier:</div><div class="right-col">{supplier}</div>
+				<div class="left-col">Street:</div><div class="right-col">{street}</div>
+				<div class="left-col">City:</div><div class="right-col">{city}</div>
+				<div class="left-col">State:</div><div class="right-col">{state}</div>
+				<div class="left-col">Zip:</div><div class="right-col">{zip}</div>
+				<div class="left-col">Phone Number:</div><div class="right-col">{phoneNumber}</div>
+				<div class="left-col">Fax Number:</div><div class="right-col">{faxNumber}</div>
+			</div>
             <h3>Supplier Details</h3>
             <h4>Contact</h4>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Name:</td>
-                        <td>{contact.name}</td>
-                    </tr>
-                    <tr>
-                        <td>Title:</td>
-                        <td>{contact.title}</td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td>{contact.email}</td>
-                    </tr>
-                    <tr>
-                        <td>Cell Number:</td>
-                        <td>{contact.cell}</td>
-                    </tr>
-                </tbody>
-            </table>
-
+			<div class="procurement-table">
+				<div class="left-col">Name:</div><div class="right-col">{contact.name}</div>
+				<div class="left-col">Title:</div><div class="right-col">{contact.title}</div>
+				<div class="left-col">Email:</div><div class="right-col">{contact.email}</div>
+				<div class="left-col">Cell Number:</div><div class="right-col">{contact.cell}</div>
+			</div>
             <h4>Description</h4>
-            <table>
-                <tbody>
-                <tr>
-                    <td>Part Number:</td>
-                    <td>{supplierPN}</td>
-                </tr>
-                <tr>
-                    <td>Description:</td>
-                    <td>{supplierDescription}</td>
-                </tr>
-                <tr>
-                    <td>Lead Time:</td>
-                    <td>{leadTime}</td>
-                </tr>
-                </tbody>
-            </table>
-
+            <div class="procurement-table">
+				<div class="left-col">Part Number:</div><div class="right-col">{supplierPN}</div>
+				<div class="left-col">Description:</div><div class="right-col">{supplierDescription}</div>
+				<div class="left-col">Lead Time:</div><div class="right-col">{leadTime}</div>
+			</div>
             <h4>Pricing</h4>
-            <table>
-                <tbody>
-                <tr>
-                    <td>Cost:</td>
-                    <td>{cost}</td>
-                </tr>
-                <tr>
-                    <td>Quote Date:</td>
-                    <td>{quoteDate}</td>
-                </tr>
-                <tr>
-                    <td>List Price (USD):</td>
-                    <td>{listPriceUSD}</td>
-                </tr>
-                <tr>
-                    <td>List Price (CAD):</td>
-                    <td>{listPriceCAD}</td>
-                </tr>
-                </tbody>
-            </table>
+            <div class="procurement-table">
+				<div class="left-col">Cost:</div><div class="right-col">{cost}</div>
+				<div class="left-col">Quote Date:</div><div class="right-col">{quoteDate}</div>
+				<div class="left-col">List Price (USD):</div><div class="right-col">{listPriceUSD}</div>
+				<div class="left-col">List Price (CAD):</div><div class="right-col">{listPriceCAD}</div>
+			</div>
 
         </div>
     </div>
+			</div>
 		</div>
 	</div>
 	<nav class="navbar fixed-bottom navbar-dark justify-content-center" style="background: rgb(198, 195, 198);">
@@ -222,32 +158,40 @@
                 <div class="modal-body">
                     <form>
 						<div class="form-group row">
-							<label for="inputGeneral" class="col-sm-2 col-form-label">General</label>
-							<div class="col-sm-10">
+							<label for="inputGeneral" class="col-sm-3 col-form-label">General</label>
+							<div class="col-sm-9">
 								<input type="text" class="form-control" id="inputGeneral">
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="inputSpecification" class="col-sm-2 col-form-label">Specification</label>
-							<div class="col-sm-10">
+							<label for="inputSpecification" class="col-sm-3 col-form-label">Specification</label>
+							<div class="col-sm-9">
 								<input type="text" class="form-control" id="inputSpecification">
 							</div>
 						</div>
-						<!-- Technology here --->
 						<div class="form-group row">
-							<label for="inputTechnology" class="col-sm-2 col-form-label">Technology</label>
-							<div class="col-sm-10">
+							<label for="inputTechnology" class="col-sm-3 col-form-label">Technology</label>
+							<div class="col-sm-9">
 								<select class="form-control" id="inputTechnology">
 									<option>Ax-Series</option>
+									<option>Bitjet</option>
 									<option>C-Series</option>
 									<option>D-Series</option>
+									<option>F-Series</option>
+									<option>G-Series</option>
+									<option>GT Controller</option>
+									<option>JetArray</option>
+									<option>K-Series</option>
+									<option>Multiple</option>
+									<option>N-Series</option>
 									<option>Other</option>
+									<option>V-Series</option>
 								</select>
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="inputDrawingNumber" class="col-sm-2 col-form-label">Drawing Number</label>
-							<div class="col-sm-10">
+							<label for="inputDrawingNumber" class="col-sm-3 col-form-label">Drawing #</label>
+							<div class="col-sm-9">
 								<input type="text" class="form-control" id="inputDrawingNumber">
 								<small id="inputDrawingNumberHelp" class="form-text text-muted">This field is optional.</small>
 							</div>
@@ -275,6 +219,10 @@
                     <div class="form-group">
                         <label for="inputUpdateDescription">Enter update description:</label>
                         <textarea class="form-control" id="inputUpdateDescription" rows="3"></textarea>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="inputIncRev">
+							<label class="form-check-label" for="inputIncRev">Check to increment revision level</label>
+						</div>
                     </div>
                 </div>
                 <div class="modal-footer">

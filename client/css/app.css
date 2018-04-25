@@ -5,11 +5,10 @@ body {
 }
 
 .record-bad {
-    background: red;
-    color:white;
     float: right;
-    border-radius: 50%;
     padding: 0.3rem 0.5rem;
+	height: 50px;
+	width: 50px;
 }
 
 #date-created {
@@ -96,10 +95,18 @@ body {
     float: right;
 }
 
+#incRev textarea {
+	margin-bottom: 20px;
+}
+
 #procurement, #details-border {
     border: 2px solid black;
     border-radius: 5px;
     background: white;
+}
+
+#procurement {
+	padding: 8px;
 }
 
 #details-border {
@@ -122,4 +129,18 @@ body {
 
 #details-data {
     margin: 20px 0;
+}
+
+.procurement-table {
+	margin-bottom: 20px;
+}
+
+.left-col {
+	display: inline-block;
+	width: 35%;
+}
+
+.right-col {
+	display: inline-block;
+	width: 65%;
 }
