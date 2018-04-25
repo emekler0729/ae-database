@@ -54,19 +54,21 @@
 		<div class="row">
 			<div id="product" class="col-sm-8">
 				<div id="details">
-                    <div>
-                        <h1>{AE Number} <i class="fa fa-times record-bad"></i></h1>
+                    <div id=details-border>
                         <div>
-                            {general} - {specification}
-                            <div id="date-created">Date created: <span>{dateCreated}</span></div>
+                            <h1>{AE Number} <i class="fa fa-times record-bad"></i></h1>
+                            <div>
+                                {general} - {specification}
+                                <div id="date-created">Date created: <span>{dateCreated}</span></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="details-data" class="d-flex justify-content-between">
-                        <div>Created by: <span>{createdBy}</span></div>
-                        <div>Technology: <span>{technology}</span></div>
-                        <div>Drawing #: <span>{drawingNumber}</span></div>
-                        <div>Stage: <span>{stage}</span></div>
+                        <div id="details-data" class="d-flex justify-content-between">
+                            <div>Created by: <span>{createdBy}</span></div>
+                            <div>Technology: <span>{technology}</span></div>
+                            <div>Drawing #: <span>{drawingNumber}</span></div>
+                            <div>Stage: <span>{stage}</span></div>
+                        </div>
                     </div>
 					<h3>Product Description</h3>
 					<textarea id="description" class="form-control" rows="10">{productDescription}</textarea>
