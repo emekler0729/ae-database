@@ -56,22 +56,30 @@
 				<div id="details">
                     <div id=details-border>
                         <div>
-                            <h1>{AE Number} <img class="record-bad" src="images/red.svg"/></h1>
+                            <h1>AE16288 <img class="record-bad" src="images/red.svg"/></h1>
                             <div>
-                                {general} - {specification}
-                                <div id="date-created">Date created: <span>{dateCreated}</span></div>
+                                Custom Extraction - HSM Wrapper
+                                <div id="date-created">Date created: <span>11/11/2017</span></div>
                             </div>
                         </div>
 
                         <div id="details-data" class="d-flex justify-content-between">
-                            <div>Created by: <span>{createdBy}</span></div>
-                            <div>Technology: <span>{technology}</span></div>
-                            <div>Drawing #: <span>{drawingNumber}</span></div>
-                            <div>Stage: <span>{stage}</span></div>
+                            <div>Created by: <span>Jane Doe</span></div>
+                            <div>Technology: <span>D-Series</span></div>
+                            <div>Drawing #: <span>A1732300</span></div>
+                            <div>Stage: <span>Ready to Order</span></div>
                         </div>
                     </div>
 					<h3>Product Description</h3>
-					<textarea id="description" class="form-control" rows="10">{productDescription}</textarea>
+					<textarea id="description" class="form-control" rows="10">
+Narrow Custom Extraction for HSM flow Wrapper 
+
+Replacement Fume Extraction Manifold Assembly for Mars Albany HSM wrappers.
+
+Replaces Fume Extraction Manifold Assembly in AE16157 design due to mechanical interferences with original design.
+
+qty 3
+					</textarea>
 				</div>
 				<div id="history">
 					<h2>Product History</h2>
@@ -87,10 +95,10 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>{Rev}</td>
-								<td>{Desc}</td>
-								<td>{Auth}</td>
-								<td>{Date}</td>
+								<td>A</td>
+								<td>Created New Part</td>
+								<td>NEW</td>
+								<td>11/11/2017</td>
 							</tr>
 						</tbody>
 					</table>
@@ -101,34 +109,34 @@
         <h2>Procurement Details</h2>
         <div id="supplier">
 			<div class="procurement-table">
-				<div class="left-col">Supplier:</div><div class="right-col">{supplier}</div>
-				<div class="left-col">Street:</div><div class="right-col">{street}</div>
-				<div class="left-col">City:</div><div class="right-col">{city}</div>
-				<div class="left-col">State:</div><div class="right-col">{state}</div>
-				<div class="left-col">Zip:</div><div class="right-col">{zip}</div>
-				<div class="left-col">Phone Number:</div><div class="right-col">{phoneNumber}</div>
-				<div class="left-col">Fax Number:</div><div class="right-col">{faxNumber}</div>
+				<div class="left-col">Supplier:</div><div class="right-col">Aluminum Fab Inc.</div>
+				<div class="left-col">Street:</div><div class="right-col">99999 Special Place, Unit 999A</div>
+				<div class="left-col">City:</div><div class="right-col">Huntsville</div>
+				<div class="left-col">State:</div><div class="right-col">AL</div>
+				<div class="left-col">Zip:</div><div class="right-col">12345</div>
+				<div class="left-col">Phone Number:</div><div class="right-col">222-123-9876</div>
+				<div class="left-col">Fax Number:</div><div class="right-col">222-321-6789</div>
 			</div>
             <h3>Supplier Details</h3>
             <h4>Contact</h4>
 			<div class="procurement-table">
-				<div class="left-col">Name:</div><div class="right-col">{contact.name}</div>
-				<div class="left-col">Title:</div><div class="right-col">{contact.title}</div>
-				<div class="left-col">Email:</div><div class="right-col">{contact.email}</div>
-				<div class="left-col">Cell Number:</div><div class="right-col">{contact.cell}</div>
+				<div class="left-col">Name:</div><div class="right-col">John Smith</div>
+				<div class="left-col">Title:</div><div class="right-col">Manager</div>
+				<div class="left-col">Email:</div><div class="right-col">john.smith@example.com</div>
+				<div class="left-col">Cell Number:</div><div class="right-col">223-555-1612</div>
 			</div>
             <h4>Description</h4>
             <div class="procurement-table">
-				<div class="left-col">Part Number:</div><div class="right-col">{supplierPN}</div>
-				<div class="left-col">Description:</div><div class="right-col">{supplierDescription}</div>
-				<div class="left-col">Lead Time:</div><div class="right-col">{leadTime}</div>
+				<div class="left-col">Part Number:</div><div class="right-col">AE16288</div>
+				<div class="left-col">Description:</div><div class="right-col">HSM Extraction Tube Assy</div>
+				<div class="left-col">Lead Time:</div><div class="right-col">1-2 weeks ARO</div>
 			</div>
             <h4>Pricing</h4>
             <div class="procurement-table">
-				<div class="left-col">Cost:</div><div class="right-col">{cost}</div>
-				<div class="left-col">Quote Date:</div><div class="right-col">{quoteDate}</div>
-				<div class="left-col">List Price (USD):</div><div class="right-col">{listPriceUSD}</div>
-				<div class="left-col">List Price (CAD):</div><div class="right-col">{listPriceCAD}</div>
+				<div class="left-col">Cost:</div><div class="right-col">$1,000.00</div>
+				<div class="left-col">Quote Date:</div><div class="right-col">11-21-17</div>
+				<div class="left-col">List Price (USD):</div><div class="right-col">$1,500.00</div>
+				<div class="left-col">List Price (CAD):</div><div class="right-col">$2,000.00</div>
 			</div>
 
         </div>
