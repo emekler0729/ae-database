@@ -22,72 +22,80 @@
         </a>
     </nav>
     <div id="controls">
-        <div id="control-button-group">
-            <button class="btn btn-primary"><i class="fa fa-save"></i></button> <!-- Update Record -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProduct"><i class="fa fa-plus"></i></button> <!-- Add Record -->
-
-        </div>
-        <form class="form-inline">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">AE</span>
-                </div>
-                <input type="text" class="form-control" placeholder="99999">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button"><i class="fa fa-location-arrow"></i></button>
-                </div>
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Search</span>
-                </div>
-                <input type="text" class="form-control" placeholder="Enter search...">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button"><i class="fa fa-search"></i></button>
-                </div>
-            </div>
-        </form>
-
+			<div id="control-button-group">
+				<button class="btn btn-primary"><i class="fa fa-save"></i></button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProduct"><i class="fa fa-plus"></i></button>
+			</div>
+			<form class="form-inline">
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">AE</span>
+					</div>
+					<input type="text" class="form-control" placeholder="99999">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button"><i class="fa fa-location-arrow"></i></button>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Search</span>
+					</div>
+					<input type="text" class="form-control" placeholder="Enter search...">
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button"><i class="fa fa-search"></i></button>
+					</div>
+				</div>
+			</form>
 
 
-    </div>
-    <div id="product">
-        <div id="details">
-            <h2>{AE Number} - {general} - {specification}</h2>
-            <div>Date created: <span>{dateCreated}</span></div>
-            <div>Created by: <span>{createdBy}</span></div>
-            <div>Technology: <span>{technology}</span></div>
-            <div>Drawing #: <span>{drawingNumber}</span></div>
-            <div>Record Quality: <span>{recordQuality}</span></div>
-            <div>Stage: <span>{stage}</span></div>
-            <h3>Product Description</h3>
-            <div id="description">{productDescription}</div>
-        </div>
-        <div id="history">
-            <h2>Product History</h2>
-            <button id="inc-rev" class="btn btn-primary" data-toggle="modal" data-target="#incRev"><i class="fa fa-angle-double-up"></i></button> <!-- Update History -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rev</th>
-                        <th>Description</th>
-                        <th>Author</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{Rev}</td>
-                        <td>{Desc}</td>
-                        <td>{Auth}</td>
-                        <td>{Date}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div id="procurement">
-        <h2>Procurement Information</h2>
+
+		</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="product" class="col-sm-8">
+				<div id="details">
+                    <div>
+                        <h1>{AE Number} <i class="fa fa-times record-bad"></i></h1>
+                        <div>
+                            {general} - {specification}
+                            <div id="date-created">Date created: <span>{dateCreated}</span></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around">
+                        <div>Created by: <span>{createdBy}</span></div>
+                        <div>Technology: <span>{technology}</span></div>
+                        <div>Drawing #: <span>{drawingNumber}</span></div>
+                        <div>Stage: <span>{stage}</span></div>
+                    </div>
+					<h3>Product Description</h3>
+					<div id="description">{productDescription}</div>
+				</div>
+				<div id="history">
+					<h2>Product History</h2>
+					<button id="inc-rev" class="btn btn-primary" data-toggle="modal" data-target="#incRev"><i class="fa fa-angle-double-up"></i></button> <!-- Update History -->
+					<table>
+						<thead>
+							<tr>
+								<th>Rev</th>
+								<th>Description</th>
+								<th>Author</th>
+								<th>Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{Rev}</td>
+								<td>{Desc}</td>
+								<td>{Auth}</td>
+								<td>{Date}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="procurement" class="col-sm-4">
+        <h2>Procurement Details</h2>
         <div id="supplier">
             <table>
                 <tbody>
@@ -187,7 +195,9 @@
 
         </div>
     </div>
-    <nav class="navbar fixed-bottom navbar-dark justify-content-center" style="background: rgb(198, 195, 198);">
+		</div>
+	</div>
+	<nav class="navbar fixed-bottom navbar-dark justify-content-center" style="background: rgb(198, 195, 198);">
         <form class="form-inline">
             <button class="btn btn-secondary"><i class="fa fa-angle-double-left"></i></button>
             <button class="btn btn-secondary"><i class="fa fa-angle-left"></i></button>
@@ -201,13 +211,45 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addProductLabel">New AE Part</h5>
+                    <h5 class="modal-title" id="addProductLabel">Add New Record</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form>
+						<div class="form-group row">
+							<label for="inputGeneral" class="col-sm-2 col-form-label">General</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputGeneral">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputSpecification" class="col-sm-2 col-form-label">Specification</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputSpecification">
+							</div>
+						</div>
+						<!-- Technology here --->
+						<div class="form-group row">
+							<label for="inputTechnology" class="col-sm-2 col-form-label">Technology</label>
+							<div class="col-sm-10">
+								<select class="form-control" id="inputTechnology">
+									<option>Ax-Series</option>
+									<option>C-Series</option>
+									<option>D-Series</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputDrawingNumber" class="col-sm-2 col-form-label">Drawing Number</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputDrawingNumber">
+								<small id="inputDrawingNumberHelp" class="form-text text-muted">This field is optional.</small>
+							</div>
+						</div>
+					</form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -221,7 +263,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="incRevLabel">Part Revision</h5>
+                    <h5 class="modal-title" id="incRevLabel">Update Product History</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
